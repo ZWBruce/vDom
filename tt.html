@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #sell_bf{
+            cursor: pointer;
+            color:#f44;
+        }
+    </style>
+</head>
+<body>
+    <span id="sell_bf" class="sell_before">
+        在线咨询
+    </span>
+    <script src="//kf.chanjet.com/kefu_static/sdk/init.js"></script>
+    <script>
+        'use strict'
+        var fn = function(){console.log(this)}
+        fn.apply(null);
+        var fromproduct = 'fudai_ad',
+            frommodule = 'web_wage',
+            params = '&fromproduct='+ fromproduct + frommodule;
+
+
+        window.onload = function () {
+
+            kf_sdk.init({
+                user_id: 378,
+                name: '薛敏',
+                group: '20',//上海轩逸 分组32，//41王升测试分组//20通用分组
+                channel: 'web_site',
+                params: params,
+            });
+
+            document.querySelector('#sell_bf').onclick = function () {
+                kf_sdk.start();
+            };
+
+        }
+    </script>
+</body>
+</html>

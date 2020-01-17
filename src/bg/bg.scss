@@ -1,0 +1,88 @@
+@import '../common.scss';
+// #blur-con::after{
+//     background-image: url('/assets/zhouxun.jpeg');
+//     background-size: cover;
+//     background-attachment: fixed;
+// }
+// #blur-con{
+//     width:500px;
+//     height:400px;
+//     // filter: blur(20px);
+//     margin:0 auto;
+//     background: rgba(255,255,255,0.5);
+//     position: relative;
+//     &::after{
+//         position: absolute;
+//         content:'';
+//         width:500px;
+//         height:400px;   
+//         animation: light 1s linear;
+//     }
+// }
+
+// @keyframes light{
+//     from {
+//         filter:brightness(100%);
+//     }
+//     to {
+//         filter:brightness(300%);
+//     }
+// }
+
+#blur-txt{
+    text-align: center;
+    animation: blurTxt 1s ease-in;
+}
+@keyframes blurTxt{
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: scale(0.8) rotate(0deg);
+
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1) rotate(360deg);
+    }
+}
+#landIn{
+    background:#222;
+    font-size:2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color:#fff;
+    // height:90px;
+    span{
+        display: inline-block;
+        margin:0 0.1em;
+        animation: landIn 1s ease-in-out;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes landIn{
+    from{opacity: 0;transform: translateY(-20%);}
+    to {opacity: 1;transform: translateY(0);}
+}
+#con{
+    width:100px;
+    height:100px;
+    background: coral;
+    animation: s 5s ease-in-out;
+}
+@keyframes s{
+    0% {transform: scale(1);}
+    50% {transform: scale(2);}
+    100% {transform: scale(1);}
+}
+.con{
+    width:100px;height:100px;background:#eee;
+    padding:10px;
+    &:hover{
+        border:10px solid #f44;
+    }
+    display: inline-block;
+    margin-left:10px;
+}

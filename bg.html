@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello</h2>
+    <script>
+    function printH2() {
+        console.log('first script', document.querySelectorAll('h2'));
+    }
+    printH2()
+    setTimeout(printH2)
+    </script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.4/css/bootstrap.css">
+    <h2>World</h2>
+    <script>
+    console.log('second script');
+    </script>
+
+    
+    <div id='nav'></div>
+
+    <div id='blur-con'></div>
+    <input type="file" style='display: none;'>
+    <h1 id='blur-txt'>年度总结</h1>
+    <p id='landIn'>你是我患得患失的梦 我是你可有可无的人 毕竟这穿越山河的箭</p>
+    <div id='con'></div>
+    <div class="con"></div>
+    <div class="con"></div>
+    <div style='height:2000px'></div>
+    <script src='http://localhost:8080/bg.js'></script>
+    <script type='module'>
+        import {a} from './a.js';
+        console.log(a)
+    </script>
+</body>
+</html>
